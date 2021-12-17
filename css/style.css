@@ -1,0 +1,430 @@
+ *{
+    box-sizing: border-box;
+}
+
+ 
+
+body{
+    margin: 0;
+    /* height: 18000px; */
+}
+
+ /*
+
+ .container{
+     width: 1100px;
+     margin: auto;
+     max-width: 100%;
+ }
+
+ .row{
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .col{
+     width: 33.33333%;
+     padding: 0 15px;
+ }
+
+ .col img{
+     width: 100%;
+ }
+
+ .card{
+     box-shadow: 7px 7px 7px #ccc;
+     position: relative;
+ }
+
+ header{
+     height: 450px;
+     background-color: royalblue;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ header div{
+     background-color: saddlebrown;
+     padding: 25px; 
+     width: 20%;
+ }
+
+ .card i {
+     position: relative;
+ }
+
+ .disc{
+     position: absolute;
+     background-color: seagreen;
+     color: #fff;
+   
+     top: 0;
+     left: 0;
+ }
+
+ .scrolltop{
+     width: 45px;
+     height: 45px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: 0;
+     background-color: seagreen;
+     color: #fff;
+     font-weight: bold;
+     padding: 15px;
+     border-radius: 7px;
+     position: fixed;
+     z-index: 1;
+ 
+ }
+
+ html{
+     scroll-behavior: smooth;
+ }
+
+ .h-45{
+     height: 450px;
+     border-bottom: 1px solid red;
+ }
+
+ .boll{
+     width: 70px;
+     height: 70px;
+     background-color: red;
+     border-radius: 50%;
+     position: sticky;
+     top: 0;
+     z-index: 2;
+ }
+
+ section {
+     height: 100vh;
+ 
+ }
+
+ #about{
+     background-color: red;
+ }
+
+ #contact{
+     background-color: blue;
+ }
+
+ .comb > p{
+     background-color: brown;
+     color: #fff;
+ }
+
+ .comb  ~  h1{
+    background-color: brown;
+    color: #fff;
+}
+
+ .btn{
+     padding: 14px;
+     background-color: crimson;
+     color: #fff;
+     border-radius: 3px;
+     border: 0;
+     width: 10%;
+     outline: 1px solid ;
+     outline-offset: 0px;
+     border-left: 15px solid transparent;
+     padding-right: 15px;
+ 
+     transition: all .6s ease-in;
+ }
+
+ .btn:hover{
+     cursor: pointer;
+     background-color: rgb(29, 223, 3);
+     border-left: 15px solid black;
+     outline-offset: 7px ;
+     outline: 1px solid rgb(29, 223, 3);
+ 
+ }
+
+
+ .btn:active{
+   width: 100%;
+}
+
+a:visited{
+    color: yellowgreen;
+}
+
+ .myinput{
+
+    transition: all .6s;
+    padding: 15px;
+
+ }
+
+ 
+.posrel{
+    position: relative;
+}
+
+.posrel span{
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    pointer-events: none;
+    background-color: #ffff;
+    transition: all .5s;
+}
+
+.myinput:focus + span {
+    top: -10px;
+ 
+    }
+    
+
+.sms{
+    width: 250px;
+    margin: auto;
+    border: 1px solid red;
+    overflow: hidden;
+
+}
+
+
+.sms img{
+ width: 100%;
+}
+
+
+.sm-body{
+    padding: 7px;
+    text-align: center;
+    position: relative;
+    bottom: -48px;
+    transition: all .6s;
+}
+
+
+.sm-body a{
+    background-color: aqua;
+    text-transform: none;
+    padding: 7px;
+    display:  block;
+    width: fit-content;
+    margin: auto;
+}
+
+.sms:hover .sm-body{
+    bottom: 0px;
+} */
+
+a{
+    text-decoration: 0;
+}
+
+header{
+    background: linear-gradient(
+90deg
+, rgb(4 121 242 / 53%) 16%, rgb(240 14 212 / 51%) 78%) , url(https://wallpaperaccess.com/full/191519.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box{
+    margin: auto;
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-6{
+    width: 50%;
+ 
+}
+
+.navbar{
+    margin-left: auto;
+}
+
+.navbar li{
+ display: inline-block;
+}
+
+.navbar li a{
+    display: inline-block;
+    padding: 2px 7px;
+    font-weight: bold;
+    color: #fff;
+   }
+
+img{
+    max-width: 100%;
+    width: 60%;
+    display: block;
+    border-radius: 6px;
+    margin-left: auto;
+    min-height: 450px;
+    object-fit: cover;
+    object-position: center;
+ 
+}
+
+.row.jus{
+    align-items: center;
+}
+
+.but a{ 
+ display: inline-block;
+ padding: 12px 30px;
+ background-color: chocolate;
+ border-radius: 2px;
+ color: #fff;
+}
+
+.image{
+    position: relative;
+}
+
+.image span{
+ position: absolute;
+ background-color: cornflowerblue;
+ color: #fff;
+ padding: 7px;
+}
+
+.parent p:first-child{
+    background-color: red;
+}
+
+.parent p:last-child{
+    background-color: rgb(5, 255, 88);
+}
+
+.parent p:nth-child(3){
+    background-color: rgb(57, 13, 255);
+}
+
+.parent p:nth-child(odd){
+  text-align: center;
+}
+
+.parent p:nth-child(even){
+    text-align: right;
+}
+
+.parent p:not(.answer){
+    font-size: 50px;
+}
+
+input[value="1"]{
+    background-color: red;
+}
+
+input[type="checkbox"]:checked + span{
+  background-color: red;
+}
+
+*::selection{
+    background-color: rgb(17, 255, 9);
+    user-select:none;
+}
+
+p::first-letter{
+  font-size: 25px;
+  color: green;
+}
+
+p::first-line{
+   background-color: wheat;
+  }
+
+p:lang(ka){
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p:lang(en){
+    font-family: Arial;
+}
+
+.m::before{
+   content: "";
+   width: 25px;
+   height: 25px;
+   background-color: red;
+   display: block;
+}
+
+.m::after{
+    content: attr(data-id);
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 255, 47);
+    display: block;
+ }
+
+
+ .over{
+     width: 50px;
+     background-color: red;
+     height: 125px;
+     overflow: hidden;
+     margin: auto;
+ }
+
+ 
+
+/* 800px ქვემოთ ეშვება */
+@media (max-width:800px){
+
+    .navbar{
+        display: none;
+    }
+ 
+
+    .col-6 {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .image img{
+        width: 100%;
+    }
+
+    header {
+        
+        background: linear-gradient(90deg, rgba(9, 12, 15, 0.53) 16%, rgba(255, 36, 7, 0.51) 78%) center center / cover no-repeat, url(https://wallpaperaccess.com/full/191519.jpg);
+   
+    }
+
+}
+
+/*801px დან 1199px დიაპაზონი */
+@media (min-width:801px) and (max-width:1199px){
+ 
+}
+
+/*1200px ზევით ეშვება */
+@media (min-width:1200px){
+
+ 
+    
+}
+
+/* @media print {
+    .but a{
+        background-color: blue;
+    }
+} */
+
+/* @media screen {
+    .but a{
+        background-color: rgb(11, 246, 11);
+    }
+} */

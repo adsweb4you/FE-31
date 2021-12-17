@@ -1,0 +1,115 @@
+//   @use "form.scss";
+  @import '../scss/form', '../scss/button';
+
+$color-light:rgb(240, 26, 26);
+
+
+%mybtn{
+    border: 0;
+    padding: 7px;
+    border-radius: 3px;
+    color: #fff;
+    outline: 0;
+
+}
+
+@mixin  inptut($radius, $color, $font) {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+    background-color: $color;
+    border-radius: $radius;
+
+    @if $font > 15 {
+         font-size: 25px;
+    }@else if $font  < 30{
+      font-size: 7px;
+    }
+    
+    @else{
+        font-size: 11px;
+    }
+
+    &:hover{
+        background-color: cyan;
+    }
+
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    height: 450px;
+    color: $color-light;
+      background: {
+      size:cover;
+      image:url('https://images.prismic.io/mystique/5d7c09b9-40e5-4254-ae1c-2c1cb59aa898_IMG3.jpg?auto=compress,format');
+      position: center;
+      repeat:no-repeat;
+  }
+
+  padding: {
+      left:15px;
+      top:25px;
+  };
+
+}
+
+.card{
+    width: 370px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 6px 4px 7px #ccc;
+    transition: all .6s ease;
+    img{
+        width: 100%;
+    }
+
+    .card-body{
+        padding: 25px;
+
+        h1{
+            background-color: rgb(27, 4, 4);
+            color: $color-light;
+        }
+
+        button{
+            display: block;
+            background-color: black;
+            @extend %mybtn;
+        }
+    }
+
+
+    &:hover{
+    transform: scale(1);
+    }
+
+}
+
+ 
+.form{
+    width: 370px;
+    margin: auto;
+    background-color: crimson;
+    padding: $border-r;
+
+input{
+    // @include form.standartinput(3px, 20px);
+}
+    
+    .inp1{
+     @include inptut(2px, red, 16);
+    }
+    .inp2{
+        @include inptut(50px, green, 5);
+       }
+}

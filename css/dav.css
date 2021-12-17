@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+
+body, h4{
+    margin: 0;
+}
+
+header{
+    position: relative;
+    background: url('https://youimg1.tripcdn.com/target/100r1f000001gor3c9565_C_750_420.jpg_.webp?proc=source%2Ftrip');
+ 
+}
+
+header::before{
+ content: "";
+ height: 35%;
+ position: absolute;
+ width: 100%;
+ display: block;
+ left: 0;
+ background-color: #fff;
+ bottom: 0;
+ z-index: 3;
+}
+
+.text{
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.text h4{
+    margin: 50px 0 ;
+}
+
+header img{
+    width: 85%;
+    display: block;
+    margin: auto;
+    position: relative;
+    z-index: 555;
+}
+
+.flex{
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog{
+
+    width: 500px;
+    height: 500px;
+    transform: skew(45deg) scale(1.5);
+    background-color: black;
+ transition:  all .6s;
+    
+}
+
+.blog:hover{
+ 
+}
+
+.blog2{
+
+    width: 500px;
+    height: 500px;
+ 
+    background-color: rgb(255, 0, 0);
+ 
+    
+}

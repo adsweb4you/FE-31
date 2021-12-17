@@ -1,0 +1,13 @@
+$border-r:50%;
+$form-lg:50px;
+
+@mixin standartinput($rad : $border-r, $bigform : $form-lg ) {
+    outline: 0;
+    padding: $form-lg;
+    border: 1px solid rgba(204, 204, 204, 0.404);
+    border-radius:$rad ;
+}
+
+form{
+    background-color: rgb(7, 226, 55);
+}
