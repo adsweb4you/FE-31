@@ -1,0 +1,81 @@
+@font-face {
+    font-family: MTAVRULI;
+    src: url('../fonts/bpg_nino_mtavruli_bold.ttf');
+}
+
+@font-face {
+    font-family: ARIAL;
+    src: url('../fonts/bpg_arial_2009.ttf');
+}
+
+.carousel-item{
+    height: 730px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    z-index: 1;
+    top: 42px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sub-nav{
+    background-color: #404040c9;
+    z-index: 1;
+}
+
+.lang a, .menu a{
+    font-size: 15px;
+    color: #fff;
+    padding: 12px 0 8px;
+    display: inline-block;
+    font-family: MTAVRULI;
+}
+
+.menu a{
+    margin-left: 26px;
+}
+
+
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.nav-link{
+    font-family: MTAVRULI;
+    font-size: 17px;
+    color: #6b6b6b;
+}
+
+.slidertext h1{
+  font-size: 24px;
+  font-family: MTAVRULI;
+  margin-bottom: 18px;
+}
+
+.slidertext a{
+    font-size: 17px;
+    font-family: MTAVRULI;
+    display: inline-block;
+    background-color: #e23848;
+    padding: 15px 35px 10px;
+    color: #fff;
+  }
+
+.slidertext p{
+    font-family: ARIAL;
+    font-size: 17px;
+    margin-bottom: 47px;
+}
+
+@media (min-width: 1400px){
+   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1122px;
+} 
+}
