@@ -73,6 +73,84 @@ a{
     font-size: 17px;
     margin-bottom: 47px;
 }
+ 
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 14px;
+    padding: 0;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid rgb(255, 255, 255);
+    background-clip: padding-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    opacity: 1;
+    position: relative;
+    transition: opacity .6s ease;
+}
+
+.carousel-indicators .active {
+    border: 3px solid yellow;
+    position: relative;
+}
+
+
+
+.nextimg{
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    opacity: 0;
+    transition: all .6s;
+}
+.carousel-indicators button:hover .nextimg{
+  opacity: 1;
+} 
+
+.card{
+    overflow: hidden;
+
+}
+
+.recs{
+  
+}
+
+.nextimg::before{
+    content: "";
+    width: 13px;
+    height: 56px;
+    position: absolute;
+    border-width: 6px;
+    border-color: #ffffff transparent transparent transparent;
+    border-style: solid;
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 39px;
+    border-bottom-left-radius: 31px;
+    border-bottom-right-radius: 34px;
+}
+
+.nextimg img{
+    width: 40px;
+    height: 40px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    object-position: center;
+    object-fit: cover;
+}
+ 
 
 @media (min-width: 1400px){
    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
