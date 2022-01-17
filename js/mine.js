@@ -50,3 +50,22 @@ function typing(text){
     let content = document.querySelector('#msg').innerText;
     msg.innerHTML = content.replaceAll(text, "<span class='highl'>"+text+"</span>")
 }
+
+let img = "img/bg.jpg";
+
+// document.getElementById('myimg').innerHTML = "<img src='"+img+"' >"
+document.getElementById('myimg').innerHTML = `<img src="${img}" >`;
+
+let x = 25.62485;
+let y = 7;
+
+let sum = x + y;
+
+let ran = Math.random() * 20;
+
+console.log(Math.round(ran));
+
+let t = "5";
+let n = 5;
+
+console.log(Number(t) + n.toString())
