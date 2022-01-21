@@ -149,20 +149,7 @@ imgs('img/bg.jpg');
 
  console.log(changeText('HTML არ არის პროგრამირების ენა'))
 
- function cards(){
-     let cr = `<div class="card" style="width: 18rem;">
-     <img src="..." class="card-img-top" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">Card title</h5>
-       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-       <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
-   </div>`
-
-   document.getElementById('fundiv').innerHTML = cr;
- }
-
- cards();
+ 
 
 //  User Object
 
@@ -179,6 +166,22 @@ let User = {
      return ( this.price *  this.wieght).toFixed() + "₾"; 
     }
 }
+
+
+function cards(){
+    let cr = `<div class="card" style="width: 18rem;">
+    <img src="${User.img}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>`
+
+  document.getElementById('fundiv').innerHTML = cr;
+}
+
+cards();
 
 Object.freeze(User); // ობიექტის გაყინვა (ცვლილებებს აღარ ასახავს)
 
@@ -198,4 +201,15 @@ console.log(allval)
 
 for (const keys in User) {
    console.log(typeof User[keys]);
+}
+
+let arrss = ["2", "10", "ტესტი", "ჩემი პირველი მასივი"]; 
+
+console.log(arrss[0].length)
+console.log(arrss[1].length)
+console.log(arrss[2].length) 
+console.log(arrss[3].length)
+
+for (let b = 0; b < arrss.length; b++) {
+    console.log(arrss[b].length)
 }
