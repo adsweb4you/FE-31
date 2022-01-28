@@ -358,12 +358,21 @@ function loaddata(arr){
 
 
     arr.forEach(el=>{
+
+      let color = el.views > 1000 ? "bg-success" : "bg-primary";
+
+      // if(el.views > 1000){
+      //   color = "bg-success";
+      // }else{
+      //   color = "bg-primary";
+      // }
+
         let card = `<div class="col-lg-4 mb-3"> <div class="card">
         <img src="${el.img}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${el.title}</h5>
           <p class="card-text"> ${el.descr}</p>
-          <p class="btn btn-primary"> ნახვების რაოდენობა ${el.views}</p>
+          <p class="btn  ${color}"> ნახვების რაოდენობა ${el.views}</p>
          </div>
         </div>
       </div>`;
@@ -372,3 +381,60 @@ function loaddata(arr){
     
     })
 }
+
+let auto = [
+  "Ford", 
+  "Mustang", 
+   5.4, 
+   ["V6", "V8"], 
+   {
+     variant:"boss 302", 
+     variant2:"Shelby", 
+     variant3:"Saalen", 
+     year:["2018", "2022"]
+    }
+  ];
+
+ 
+ let strs = `${auto[0]}  ${auto[1]} გამოდის ${auto[2]} ${auto[3][1]} ტიპის  ძრავით,
+ ასევე მისი მოდიფიკაციებია ${auto[4].variant}, ${auto[4].variant2} 
+ საუკეთესო მოდელები გამოდიოდა  ${auto[4].year[0]} დან  ${auto[4].year[1]} მდე
+  `;
+ 
+
+//  console.log(l);
+
+
+/* ======== logical 
+  =    მინიჭების ოპერატორი
+  ==   შედარების ოპერატორი
+  ===  შედარების ოპერატორი (ტიპი/მნიშვნელობა)
+  >    შედარების ოპერატორი (მეტობა)
+  >    შედარების ოპერატორი (ნაკლებობა)
+  >=   შედარების ოპერატორი  მეტია ან ტოლია
+  <=   შედარების ოპერატორი ნაკლებია ან ტოლია
+
+  &&   "და"  ოპერატორი (end)
+  ||   "ან" ოპერატორი (or)
+  !    "არ" ოპერატორი (not)
+
+  ++  1  ით გაზრდა
+  --  1  ით დაპატარავება
+
+  +=  საკუთარ მნიშვნელობაზე + - * /
+
+========  */
+
+if(1 == 9){
+  console.log("true");
+}else if(5 > 44){
+  console.log("else if true")
+}else{
+  console.log("თუ  if პირობ აბრუნებს false");
+}
+
+let v = 2;
+
+let vvalue = v == 0 ? 'v მნიშვნელობა არის 0' : ''
+
+console.log(vvalue)
