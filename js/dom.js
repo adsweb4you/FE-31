@@ -54,7 +54,31 @@ function remiven(){
 
 //byclass[1].innerHTML = "ჩანაცვლებული მნიშვნელობა"
 
- 
-console.log(bytag)
+
+let plus = document.querySelector('.incr');
+let minus = document.querySelector('.decr');
+let inntext = document.querySelector('.out');
+let calcs = document.querySelector('.calcs');
+let s = 1;
+plus.addEventListener('click', function(){
+    inntext.innerText = ++s;
+
+    //  calcs.classList.add('new-class', 'sm') // კლასის დამატება
+   //  calcs.classList.remove('bg-danger') // კლასის წაშლა
+  //  calcs.classList.toggle('new-class') // კლასის წაშლა/მინიჭება
+ // calcs.classList.replace('bg-danger', 'bg-succes') // // კლასის ჩანაცვლება
+
+  console.log(calcs.classList.contains('bg-dangers'))
+
+})
+
+
+minus.addEventListener('click', function(){
+    if(s > 1){
+         inntext.innerText = --s
+    }
+   
+})
+
 
  

@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+}
+
+.calcs{
+ 
+    width: 13.33%;
+    background: #28465e;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    margin: auto;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 33px;
+}
+
+.calcs div{
+  cursor: pointer;
+}
+
+.new-class{
+    background-color: green;
+}
