@@ -358,6 +358,7 @@ function loaddata(arr){
 
 
     arr.forEach(el=>{
+ 
 
       let color = el.views > 1000 ? "bg-success" : "bg-primary";
 
@@ -438,3 +439,144 @@ let v = 2;
 let vvalue = v == 0 ? 'v მნიშვნელობა არის 0' : ''
 
 console.log(vvalue)
+
+// let lang = "ru";
+// let home ;
+
+ 
+
+
+// document.getElementById('leng').innerHTML = home;
+
+let d = new Date();
+
+let year = d.getFullYear(); //აბრუნებს წელს
+let month = d.getMonth() + 1; //აბრუნებს თვე
+
+//d.setDate(d.getDate() + 14)
+
+let day = d.getDate() ; //აბრუნებს რიცხვს
+
+let realday = d.getDay();
+
+let hour = d.getHours() // გვიბრუნებს საათს
+let min = d.getMinutes() // გვიბრუნებს წუთს
+let sec = d.getSeconds() // გვიბრუნებს წამს
+
+
+
+let strdate = d.toLocaleDateString();
+let strdtime = d.toLocaleTimeString();
+console.log(strdate, strdtime);
+
+let olddate = new Date(2000-25-06);
+
+
+// console.log(olddate.getDay());
+
+let myday;
+
+switch (olddate.getDay()) {
+  case 0:
+    myday = "კვირა"
+    break;
+
+    case 1:
+      myday = "ორშაბათი"
+      break;
+
+      case 2:
+        myday = "სამშაბათი"
+        break;
+
+        case 3:
+          myday = "ოთხშაბაი"
+          break;
+
+          
+        case 4:
+          myday = "ხუთშაბათი"
+          break;
+
+          case 5 :
+            myday = "პარასკევი"
+            break;
+
+            case 6 :
+              myday = "შაბათი"
+              break;
+
+  default:
+    myday = "as defined"
+    break;
+}
+
+   console.log(myday);
+
+
+   let now =   Date.parse(new Date());
+   let startdate = Date.parse(new Date("2022.01.31"))
+
+   
+   let diff = startdate - now;
+   let diffday = Math.ceil(diff / (1000 * 60 * 60 * 24));
+   console.log(10 % 4);
+ 
+
+
+  let Blogss = [
+   {
+     title:"ბლოგის დასახელება",
+     descr:"ბლოგის აღწერა",
+     created_at:new Date(),
+     img:"",
+     active:true,
+     view:400
+   },
+
+   {
+    title:"ბლოგის დასახელება1",
+    descr:"ბლოგის აღწერა",
+    created_at:new Date('2022-01-05'),
+    img:"img/logo.png",
+    active:true,
+    view:400
+  },
+
+  {
+    title:"ბლოგის დასახელება2",
+    descr:"ბლოგის აღწერა",
+    created_at:new Date('2021-01-01'),
+    img:"",
+    active:true,
+    view:400
+  }
+
+  ]
+
+  let currdat = new Date();
+  Blogss.forEach(function(bl, index){
+console.log(index);
+  let checkdate = currdat.toLocaleDateString();
+  let blogdate = bl.created_at.toLocaleDateString();
+  let mat ;
+  if(checkdate == blogdate){
+    mat = "დღეს"
+  }else{
+    mat = bl.created_at.toLocaleDateString();
+  }
+
+
+    let card = `<div class="col-lg-4 mb-3"> <div class="card">
+    <img src="${""}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${bl.title}</h5>
+      <p class="card-text"> ${bl.descr}</p>
+      <p class="card-text"> ${mat}</p>
+      <p class="btn  "> ნახვების რაოდენობა ${bl.view}</p>
+     </div>
+    </div>
+  </div>`;
+
+  document.getElementById('loads').innerHTML += card;
+  })
