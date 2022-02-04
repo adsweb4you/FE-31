@@ -87,7 +87,37 @@ body{
 }
 .attr{
     margin: 100px auto;
+    padding:50px;
+    width: 35%;
+    box-shadow: 1px 2px 16px #ccc
+}
+
+.attr input, button{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e5caca9e;
+    border-radius: 7px;
+}
+
+.attr button{
+    padding: 15px 20px;
+    width: fit-content;
+    color: #fff;
+    cursor: pointer;
+    background-color: #3f51b5;
+}
+
+.attr button:disabled{
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+#msg{
+    display: none;
     padding: 25px;
-    width: 50%;
-    border: 1px solid red;
+    border-radius: 7px;
+    background-color: #f443363a;
+    color: red;
 }

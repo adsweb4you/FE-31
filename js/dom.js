@@ -102,8 +102,41 @@ inputs.oninput = function(){
     }
 }
 
+let User = {
+    email:"admin@gmail.com",
+    pass:"123123",
+}
+
+let cou = 0;
+
 mybtns.onclick = function(e){
     e.preventDefault();
+    css(msg, {
+        display:"none"
+    })
+    let email = document.querySelector('[name="user"]');
+    let pass = document.querySelector('[name="pass"]')
+   
+    if(email !== User.email && pass !== User.pass){
+        if (cou >= 3) {
+            this.disabled = true;
+            msg.innerText = "თქვენ დაგებლოკათ ანგარიშ!";
+
+            setTimeout( function(){
+                mybtns.disabled = false;
+                msg.innerText = "თქვენ ანგარიში განიბლოკა";
+                cou = 0;
+            }, 4000)
+
+        }
+       css(msg, {
+           display:"block"
+       })
+        cou++;
+    }else{
+        window.location.reload();
+    }
+
       //     inputs.getAttribute('type') აბრუნებს ატრიბუტის მნიშვნელობას 
      //      inputs.type აბრუნებს ატრიბუტის მნიშვნელობას (შემოკლება)
     //       inputs.setAttribute('disabled', true) ატრიბუტის მინიჭება
@@ -111,6 +144,28 @@ mybtns.onclick = function(e){
   //         inputs.type =  inputs.type ==  "text" ?   'password' : 'text'    ტრიბუტის განახლება 
  //          inputs.toggleAttribute('disabled') ატრიბუტის toggle
  // inputs.removeAttribute('disabled') // ატრიბუტის წაშლა
-    console.log( )
  
+    // inputs.style.backgroundColor =;
+    // inputs.style.color = "#fff"
+    // inputs.style.borderRadius = "20px"
+
+    // css(inputs, {
+    //     backgroundColor: "red",
+    //     color: "#fff",
+    //     borderRadius: "20px",
+    //     padding:"20px",
+    //     border:"0"
+    // })
 }
+
+ 
+
+function css(selector, styleobj){
+    for (const key in styleobj) {
+      const prop = key;
+      const val =  styleobj[key];
+      selector.style[prop] = val;
+    }
+}
+
+ 
