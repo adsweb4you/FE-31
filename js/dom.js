@@ -88,3 +88,29 @@ btn.addEventListener('click', function(){
     btn.classList.toggle('show')
 })
  
+
+let mybtns = document.querySelector('.attrbtn');
+let inputs = document.querySelector('.attr input');
+
+mybtns.disabled=true;
+
+inputs.oninput = function(){
+    if(this.value.length > 0){
+        mybtns.disabled=false;
+    }else{
+        mybtns.disabled=true;
+    }
+}
+
+mybtns.onclick = function(e){
+    e.preventDefault();
+      //     inputs.getAttribute('type') აბრუნებს ატრიბუტის მნიშვნელობას 
+     //      inputs.type აბრუნებს ატრიბუტის მნიშვნელობას (შემოკლება)
+    //       inputs.setAttribute('disabled', true) ატრიბუტის მინიჭება
+   //        inputs.disabled = true; ტრიბუტის მინიჭება  (შემოკლება)
+  //         inputs.type =  inputs.type ==  "text" ?   'password' : 'text'    ტრიბუტის განახლება 
+ //          inputs.toggleAttribute('disabled') ატრიბუტის toggle
+ // inputs.removeAttribute('disabled') // ატრიბუტის წაშლა
+    console.log( )
+ 
+}

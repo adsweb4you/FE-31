@@ -85,3 +85,9 @@ body{
 .sidebar.show{
     transform: translatex(0);
 }
+.attr{
+    margin: 100px auto;
+    padding: 25px;
+    width: 50%;
+    border: 1px solid red;
+}
