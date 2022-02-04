@@ -80,5 +80,11 @@ minus.addEventListener('click', function(){
    
 })
 
+let btn = document.querySelector('.sidebtn');
+let bar = document.querySelector('.sidebar');
 
+btn.addEventListener('click', function(){
+    bar.classList.toggle('show')
+    btn.classList.toggle('show')
+})
  

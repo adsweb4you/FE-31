@@ -26,3 +26,62 @@ body{
 .new-class{
     background-color: green;
 }
+
+.sidebtn{
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    outline: 0;
+    width: 50px;
+    height: 40px;
+    transition: all .6s;
+}
+
+.sidebtn span{
+    height: 3px;
+    background-color: #f44336;
+    display: block;
+    width: 100%;
+    transition: all .6s;
+    margin-bottom: 5px;
+}
+
+.sidebtn.show  {
+
+    margin-right: 300px;
+
+}
+
+.sidebtn.show span:nth-child(2){
+  opacity: 0;
+  width: 0;
+}
+
+.sidebtn.show span:nth-child(1){
+  transform: translateY(5px) rotate(45deg);
+  }
+
+  .sidebtn.show span:nth-child(3){
+  transform: translateY(-10px) rotate(-45deg);
+  }
+
+.sidebar{
+    height: 100vh;
+    position: fixed;
+    background-color: #3f51b5;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    transition: all .6s;
+    transform: translatex(100%);
+}
+
+.sidebar.show{
+    transform: translatex(0);
+}
