@@ -189,3 +189,25 @@ body{
   cursor: pointer;
   color: red;
 }
+
+.cars {
+    overflow: hidden;
+}
+
+.cars p{
+color: #3f51b5;
+  width: 450px; 
+  height: 250px;
+  transform: translateX(100%);
+  transition: all .6s;
+    
+}
+
+.cars p.active{
+    transform: translateX(0);
+   
+    color: #fff;
+    
+}
+
+ 

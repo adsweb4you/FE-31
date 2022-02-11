@@ -229,11 +229,50 @@
 
 
    i.addEventListener('click', function(){
-       let id = this.getAttribute('data-id'); // აიდის წამოღება
-       document.querySelector('#index'+id).remove() // აიდი მიხედვით ელემენტის წაშლა
+     //  let id = this.getAttribute('data-id'); // აიდის წამოღება
+     //  document.querySelector('#index'+id).remove() // აიდი მიხედვით ელემენტის წაშლა
+     this.parentElement.remove();
    })
 
  })
 
  
 
+let children = document.querySelector('.minep');
+let parent = document.querySelector('.col-lg-4');
+// children.parentElement  აბრუნებს მშობელ ელემენტს 
+// parent.children აბრუნებს ელემენტის შვილობილ ელემენტებს
+// children.nextElementSibling აბრუნებს ქვედა მეზობელს
+// children.previousElementSibling //  აბრუნებს ზედა მეზობელს
+ 
+
+let prev = document.querySelector('.btn-danger');
+let next = document.querySelector('.btn-success');
+let p = document.querySelectorAll('.col-lg-4 p');
+
+// next
+next.addEventListener('click', function(){
+   let active = document.querySelector('p.active');
+   active.classList.remove('active');
+   if (active.nextElementSibling != null) {
+      active.nextElementSibling.classList.add('active')
+   }else{
+     p[0].classList.add('active')
+  
+   }
+  
+})
+
+
+// next
+prev.addEventListener('click', function(){
+  let active = document.querySelector('p.active');
+  active.classList.remove('active');
+  if (active.previousElementSibling != null) {
+     active.previousElementSibling.classList.add('active')
+  }else{
+    p[p.length - 1].classList.add('active')
+ 
+  }
+ 
+})

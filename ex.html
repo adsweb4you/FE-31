@@ -1,608 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <style>
+    .rows{
+
+    flex-wrap: wrap;
+    width: 100%;
+}
+.row-1{
+    border: 1px solid #ccc;
+    width: 50%;
+    text-align: center;
+}
+.row-2{
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 50%;
+    text-align: center;
+}
+
+  </style>
     <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-<style>
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-.row-cont {
-  width: 1450px;
-  max-width: 100%;
-}
-.row-cl {
-  row-gap: 25px;
-}
-.section-inner {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 25px;
-}
-.bg-image {
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(https://images8.alphacoders.com/473/473226.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
-}
-.header-color {
-  color: white !important;
-  font-weight: bold;
-}
-.header-color span {
-  color: #bd9d22 !important;
-}
-.home-color {
-  color: #bd9d22 !important;
-}
-.home-color:hover {
-  color: white !important;
-}
-.color-style {
-  color: white !important;
-}
-.color-style:hover {
-  color: #bd9d22 !important;
-  justify-content: ;
-}
-.head-info {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 100%;
-}
-.head-cont {
-  max-width: 100%;
-  padding-top: 100px;
-}
-.head-info-cont,
-.head-info-cont-2 {
-  margin-bottom: 25px;
-}
-.p-cont {
-  font-size: calc(0.5rem + 1vw);
-}
-.btn-class {
-  /* display: flex;
-  gap: 20px; */
-}
-.btn--list {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  justify-content: center;
-}
-.btn--1 {
-  color: white;
-  padding: 15px 30px;
-  background-color: #bd9d22;
-  border-radius: 50px;
-}
-.btn--2 {
-  color: white;
-  padding: 15px 30px;
-  color: #bd9d22;
-  border: solid 1px #bd9d22;
-  border-radius: 50px;
-}
-.btn--1 a {
-  color: white;
-  text-decoration: none;
-}
-.btn--2 a {
-  color: #bd9d22;
-  text-decoration: none;
-}
-.down-scroll {
-  margin-top: 150px;
-}
-.down-scroll svg {
-  color: white !important;
-}
-.col-2 {
-  width: 300px;
-  box-shadow: 0px 0px 10px rgb(105, 105, 105);
-  border-radius: 15px;
-}
-.head-info-2 {
-  position: relative;
-}
-.line {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 50px;
-  height: 5px;
-  background-color: #bd9d22;
-}
-.color-3 a {
-  color: #bd9d22;
-  text-decoration: none;
-}
-#big {
-  font-size: 50px;
-}
-.img-item {
-  max-width: 100% !important;
-}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
 
-.img-gp {
-  row-gap: 25px;
-}
-.padding-item {
-  padding: 10px;
-}
 
-.carousel-text {
-  bottom: 40%;
-  font-size: 40px;
-}
-.carousel-btn {
-  height: 30px !important;
-  border-radius: 50%;
-  margin-bottom: 200px;
-}
-.row-cont--2 {
-}
-.img-cont--2 img {
-  max-width: 100%;
-}
-.text-information {
-  position: relative;
-  height: 100px;
-}
-.line1 {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 50px;
-  height: 5px;
-  background-color: #bd9d22;
-}
-@media (max-width: 1250px) {
-  .img-item {
-    text-align: center;
-  }
-  .row-col-cl {
-    gap: 25px;
-  }
-}
-@media (max-width: 600px) {
-  .img-gp {
-    gap: 25px;
-  }
-  .img-item {
-    text-align: center;
-    row-gap: 100px;
-  }
-  .img-item img {
-    width: 280px;
-    height: 200px;
-  }
-  .btn--list {
-    padding: inherit;
-  }
-  .btn--list .btn--1,
-  .btn--2 {
-    padding: 12px 20px;
-    font-size: 8px;
-  }
-}
+    <div class="mx-auto col-lg-6 shadow   mt-5">
+      <div class="d-flex">
+          <div class="row-1">
+            <h2>Row Number</h2>
+        </div>
+        <div class="row-1">
+            <h2>Remove Row</h2>
+        </div>
+      </div>
 
-</style>
+      <div class="d-flex">
+        <div class="row-2">
+            <p class="txt-1">Row 1</p>
+        </div>
+        <div class="row-2">
+            <button type="button" class="btn btn-success mt-2">Remove</button>
+        </div>
+      </div>
 
-  </head>
-  <body>
-    <main>
-      <header>
-        <div class="bg-image">
-          <nav
-            class="navbar navbar-expand-md navbar-light bg-light bg-transparent"
-          >
-            <div class="container-fluid">
-              <a class="navbar-brand text-ligh header-color" href="#"
-                >BA<span>KER</span></a
-              >
-              <button
-                class="navbar-toggler bg-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link active home-color"
-                      aria-current="page"
-                      href="#"
-                      >HOME</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link color-style" href="#">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link color-style" href="#">SERVICES</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link color-style" href="#">PORTFOLIO</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link color-style" href="#">TESTIMONIAL</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link color-style" href="#">BLOG</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link color-style" href="#">CONTACT US</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <div class="head-info">
-            <div class="head-cont text-light text-center m-auto">
-              <div class="head-info-cont">
-                <h4>WE ARE AT BAKER</h4>
-              </div>
-              <div class="head-info-cont-2">
-                <h1>STARTING A NEW JOURNEY!!</h1>
-              </div>
-              <div class="p-cont">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Dolores assumenda dolorem quo sint aliquam voluptatibus modi
-                  accusantium a aut odio veritatis dolore ab ipsa debitis
-                  ratione ullam alias, laboriosam possimus doloremque. Sit esse
-                  iure porro libero qui eligendi architecto velit,
-                  exercitationem commodi
-                </p>
-              </div>
-              <div class="btn-class mt-5">
-                <ul class="btn--list">
-                  <li class="btn--1"><a href="#">DOWNLOAD NOW</a></li>
-                  <li class="btn--2"><a href="#">LEARN MORE</a></li>
-                </ul>
-              </div>
-              <!-- <div class="btn-class mt-5">
-              <a href="#" class="btn-1 d-inline">DOWNLOAD NOW</a>
-              <a href="#" class="btn-2 d-inline">LEARN MORE</a>
-            </div> -->
-              <div class="down-scroll">
-                <a href="#">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    fill="currentColor"
-                    class="bi bi-chevron-double-down"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <section>
-        <div class="container-fluid m-auto mt-5 row-cont">
-          <div class="row justify-content-around text-center w-100 row-cl">
-            <div class="col-2">
-              <div class="card-item">
-                <img src="https://img.icons8.com/color/150/000000/light.png" />
-                <h2>Creative Concept</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  optio quae iste fugit facere? Hic sequi laboriosam dolores
-                  nihil.
-                </p>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card-item">
-                <img
-                  src="https://img.icons8.com/external-sbts2018-lineal-color-sbts2018/150/000000/external-document-work-from-home-sbts2018-lineal-color-sbts2018-1.png"
-                />
-                <h2>Creative Concept</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  optio quae iste fugit facere? Hic sequi laboriosam dolores
-                  nihil.
-                </p>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card-item">
-                <img
-                  src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/150/000000/external-coin-economy-kiranshastry-lineal-color-kiranshastry.png"
-                />
-                <h2>Creative Concept</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  optio quae iste fugit facere? Hic sequi laboriosam dolores
-                  nihil.
-                </p>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card-item">
-                <img src="https://img.icons8.com/color/150/000000/lock-2.png" />
-                <h2>Creative Concept</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  optio quae iste fugit facere? Hic sequi laboriosam dolores
-                  nihil.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container-fluid ms-auto mt-5 row-cont">
-          <div class="info-title-2 text-left">
-            <div class="text-center head-info-2 pb-5">
-              <h1>WHAT WE DO?</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Consequuntur Lorem ipsum dolor sit amet consectetur, adipisicing
-                elit. Consequuntur ut, <br />
-                autem nihil nesciunt laborum explicabo nobis maiores at
-                reiciendis!
-              </p>
-              <div class="line"></div>
-            </div>
-            <div class="row justify-content-around pt-5 row-col-cl">
-              <div class="col-2">
-                <div class="card-item-2">
-                  <span><span id="big">D</span> esign And</span>
-                  <h5>Development</h5>
-                  <div class="pt-3 color-3">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Cum ipsa perferendis impedit unde neque eos sequi soluta
-                      eius mollitia voluptas.
-                    </p>
-                    <a href="#">Learn more</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="card-item-2">
-                  <span><span id="big">W</span> ebsite Maintenance</span>
-                  <h5>Development</h5>
-                  <div class="pt-3 color-3">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Cum ipsa perferendis impedit unde neque eos sequi soluta
-                      eius mollitia voluptas.
-                    </p>
-                    <a href="#">Learn more</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="card-item-2">
-                  <span><span id="big">S</span> eo</span>
-                  <h5>Optimization</h5>
-                  <div class="pt-3 color-3">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Cum ipsa perferendis impedit unde neque eos sequi soluta
-                      eius mollitia voluptas.
-                    </p>
-                    <a href="#">Learn more</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="card-item-2">
-                  <span><span id="big">D</span> igital</span>
-                  <h5>Marketing</h5>
-                  <div class="pt-3 color-3">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Cum ipsa perferendis impedit unde neque eos sequi soluta
-                      eius mollitia voluptas.
-                    </p>
-                    <a href="#">Learn more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container-fluid section-inner">
-          <div class="text-center">
-            <h1>OUR RECENT WORKS</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-              dolorem excepturi id ut eaque quidem nemo molestias. Asperiores,
-              odit nobis?
-            </p>
-          </div>
-          <div class="row justify-content-evenly img-gp">
-            <div class="col">
-              <div class="img-item">
-                <img
-                  src="https://wallpapercave.com/wp/wp5405231.jpg"
-                  alt=""
-                  width="600"
-                  height="300"
-                />
-              </div>
-            </div>
-            <div class="col">
-              <div class="img-item">
-                <img
-                  src="https://wallpaperbat.com/img/418314-free-download-download-wallpaper-1920x1080-bird-silhouette-vector.jpg"
-                  alt=""
-                  width="600"
-                  height="300"
-                />
-              </div>
-            </div>
-            <div class="col">
-              <div class="img-item">
-                <img
-                  src="https://cdn.wallpapersafari.com/27/79/87XaMR.jpg"
-                  alt=""
-                  width="600"
-                  height="300"
-                />
-              </div>
-            </div>
-            <div class="col">
-              <div class="img-item">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJo4ZuH7jEJB1Lo9N2egMdRiJ7hsaNuI1uww&usqp=CAU"
-                  alt=""
-                  width="600"
-                  height="300"
-                />
-              </div>
-            </div>
-            <div class="col">
-              <div class="img-item">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0qcXeMg41GSclfrCJQcKUS9BE1MLwiJC2Sg&usqp=CAU"
-                  alt=""
-                  width="600"
-                  height="300"
-                />
-              </div>
-            </div>
-            <div class="col">
-              <div class="img-item">
-                <img
-                  src="https://archive.org/download/ammunition_bullets_2-wallpaper-1920x1080/ammunition_bullets_2-wallpaper-1920x1080.jpg"
-                  alt=""
-                  width="600"
-                  height="300"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mt-5">
-        <div
-          id="carouselExampleCaptions"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active section-img-cl">
-              <img
-                src="https://www.desktophut.com/wp-content/uploads/2021/11/Marvel-Miles-Morales-Spiderman-in-Spider-Verse-Live-Wallpaper/Marvel-Miles-Morales-Spiderman-in-Spider-Verse-Live-Wallpaper_thumbnail.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block carousel-text">
-                <h5>
-                  Come a day there wont room for naughty men like us to slip at
-                  all this job goes south there may not another.
-                </h5>
-                <p>Shaun Paul client</p>
-              </div>
-            </div>
-            <div class="carousel-item section-img-cl">
-              <img
-                src="https://cdn.statically.io/img/i.pinimg.com/originals/52/96/7e/52967e9aee1c617cb0668d3ef1704eba.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block carousel-text">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item section-img-cl">
-              <img
-                src="https://cdn.statically.io/img/i.pinimg.com/originals/11/1a/03/111a03133d14214539c96e0f657dff1a.png"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block carousel-text">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section>
-        <div class="container-fluid pt-5">
-          <div class="text-information text-center mb-5">
-            <h1>Latest From Our Blog</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio,
-              voluptas.
-            </p>
-            <div class="line1"></div>
-          </div>
-          <div class="row row-cont--2">
-            <div class="col img-cont--2">
-              <img
-                src="https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
-                alt=""
-              />
-            </div>
-            <div class="col img-cont--2">
-              <img
-                src="https://images.unsplash.com/photo-1638913662539-46e7ccd6d912?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                alt=""
-              />
-            </div>
-            <div class="col img-cont--2">
-              <img
-                src="https://images.unsplash.com/photo-1640562329119-efcaa3dcf18d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="rows">
+
+      </div>
+
+    <button type="button" class="btn btn-danger mt-3 mb-2 ">Add new Row</button>
+</div>
+
+
+<script>
+  let index = 2;
+
+let forms = document.querySelector('.rows');
+let btns = document.querySelector('.btn-danger');
+let remv = document.querySelector('.btn-success')
+
+
+
+btns.addEventListener('click', function(){
+
+ 
+        let pardiv = document.createElement('div');
+        pardiv.classList.add('d-flex');
+        
+
+        let parow1 = document.createElement('div');
+        parow1.classList.add('row-2');
+        parow1.innerText = "Row " + index++;
+
+        let parow2 = document.createElement('div');
+        parow2.classList.add('row-2');
+        let button = document.createElement('button');
+        button.classList.add('btn', 'btn-success', 'mt-2')
+        button.innerText = "remove"
+        parow2.appendChild(button);
+
+        pardiv.appendChild(parow1);
+        pardiv.appendChild(parow2);
+
+        forms.append(pardiv);
+    
+        
+
+
+    pardiv.addEventListener('click', function(){
+        this.remove();
+    })
+
+
+})
+</script>
+</body>
 </html>
