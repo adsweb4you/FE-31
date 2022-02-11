@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slider.css">
+   
+</head>
+<body>
+<header>
+    <div class="caruser">
+
+        <button class="btn-prev">წინა</button>
+        <button class="btn-next">შემდეგი</button>
+
+        <div class="caruse-items">
+            <div class="item active" style="background-image:url('img/slider.png')">
+              <h1>dsfdsf </h1>
+            </div>
+            <div class="item  " style="background-image:url('img/slider.png')">
+                <h1>dsfdsf </h1>
+              </div>
+              <div class="item  " style="background-image:url('img/slider.png')">
+                <h1>dsfdsf </h1>
+              </div>
+              <div class="item  " style="background-image:url('img/slider.png')">
+                <h1>dsfdsf </h1>
+              </div>
+        </div>
+    </div>
+</header>
+    
+
+    <script>
+let prev = document.querySelector('.btn-prev');
+let next = document.querySelector('.btn-next');
+let p = document.querySelectorAll('.item');
+
+// next
+next.addEventListener('click', function(){
+   let active = document.querySelector('.item.active');
+   let prcar =  document.querySelector('.item.prevcarusel') 
+
+
+   
+ 
+
+ 
+
+    //    setTimeout(()=>{ 
+    //         prcar.classList.remove('prevcarusel'); 
+    //    }, 600)
+    
+ 
+active.classList.replace('active', 'prevcarusel');  
+      
+      if(prcar != null){
+        prcar.classList.remove('prevcarusel');  
+       }
+
+   if (active.nextElementSibling != null) {
+      active.nextElementSibling.classList.add('active')
+
+  
+
+   }else{ 
+      
+       setTimeout(()=>{
+        document.querySelector('.item.prevcarusel').classList.remove('prevcarusel');
+ 
+       },600) 
+       p[0].classList.add('active')
+     
+   }
+  
+})
+
+
+// next
+prev.addEventListener('click', function(){
+  let active = document.querySelector('.item.active');
+
+  let prcar =  document.querySelector('.item.prevcarusel') 
+
+//   if(prcar != null){
+//         prcar.classList.remove('prevcarusel'); 
+//   }
+// if(prcar != null && prcar.previousElementSibling != null){
+// prcar.previousElementSibling.classList.add('prevcarusel');
+// }else{
+//     p[p.length - 1].classList.add('prevcarusel')
+// }
+
+if(prcar != null && prcar.previousElementSibling != null){
+      prcar.previousElementSibling.classList.add('prevcarusel')
+}
+
+
+  active.classList.remove('active');
+ 
+  if (active.previousElementSibling != null) { 
+    
+     active.previousElementSibling.classList.replace('prevcarusel', 'active')
+    
+  }else{
+    p[p.length - 1].classList.add('active')
+ 
+  }
+ 
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    margin-block-start: 0 ;
+    margin-block-end: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.caruser{
+ overflow: hidden;
+}
+
+.caruse-items{
+    height: 100vh;
+    display: inline-flex;
+}
+
+.caruser button{
+   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 9999;
+  transform: translateY(-50%);
+}
+
+.btn-prev{
+    left: 25px;
+}
+
+.btn-next{
+    right: 25px;
+}
+
+.item{
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    transform: translateX(100%);
+    transition: all .6s;
+}
+
+.item.active{
+    transform: translateX(0);
+    z-index: 99;
+}
+
+.item.prevcarusel{
+    transform: translateX(-100%);
+}
