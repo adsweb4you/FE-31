@@ -17,21 +17,28 @@
 
         <div class="caruse-items">
             <div class="item active" style="background-image:url('img/slider.png')">
-              <h1>dsfdsf </h1>
+              <h1>content1 </h1>
             </div>
             <div class="item  " style="background-image:url('img/slider.png')">
-                <h1>dsfdsf </h1>
+                <h1>content2 </h1>
               </div>
               <div class="item  " style="background-image:url('img/slider.png')">
-                <h1>dsfdsf </h1>
+                <h1>content3 </h1>
               </div>
               <div class="item  " style="background-image:url('img/slider.png')">
-                <h1>dsfdsf </h1>
+                <h1>content4 </h1>
               </div>
         </div>
+
+        <div class="switch">
+
+        </div>
+
+      
+
     </div>
 </header>
-    
+      <input type="text" id="ss" name="" id="">
 
     <script>
 let prev = document.querySelector('.btn-prev');
@@ -44,9 +51,12 @@ next.addEventListener('click', function(){
    let prcar =  document.querySelector('.item.prevcarusel') 
 
 
-   
- 
+  this.disabled = true;
+  
 
+  setTimeout(()=>{
+    next.removeAttribute('disabled')
+  }, 600)
  
 
     //    setTimeout(()=>{ 
@@ -62,19 +72,18 @@ active.classList.replace('active', 'prevcarusel');
 
    if (active.nextElementSibling != null) {
       active.nextElementSibling.classList.add('active')
-
-  
-
+ 
    }else{ 
       
        setTimeout(()=>{
         document.querySelector('.item.prevcarusel').classList.remove('prevcarusel');
+  
  
        },600) 
        p[0].classList.add('active')
      
    }
-  
+ 
 })
 
 
@@ -84,32 +93,118 @@ prev.addEventListener('click', function(){
 
   let prcar =  document.querySelector('.item.prevcarusel') 
 
-//   if(prcar != null){
-//         prcar.classList.remove('prevcarusel'); 
-//   }
-// if(prcar != null && prcar.previousElementSibling != null){
-// prcar.previousElementSibling.classList.add('prevcarusel');
-// }else{
-//     p[p.length - 1].classList.add('prevcarusel')
-// }
+ 
 
-if(prcar != null && prcar.previousElementSibling != null){
-      prcar.previousElementSibling.classList.add('prevcarusel')
-}
+// if(prcar != null && prcar.previousElementSibling != null){
+//       prcar.previousElementSibling.classList.add('prevcarusel')
+// }
 
 
   active.classList.remove('active');
- 
-  if (active.previousElementSibling != null) { 
+
+  if (active.previousElementSibling != null) {
     
-     active.previousElementSibling.classList.replace('prevcarusel', 'active')
+     active.previousElementSibling.classList.remove('prevcarusel') 
+     active.previousElementSibling.classList.add('active')
+     if( active.previousElementSibling.previousElementSibling){
+        active.previousElementSibling.previousElementSibling.classList.add('prevcarusel')
+     }
     
   }else{
     p[p.length - 1].classList.add('active')
+    p[p.length - 1].previousElementSibling.classList.add('prevcarusel')
  
   }
  
 })
+
+let outsw = document.querySelector('.switch')
+
+let uls = document.createElement('ul');
+
+p.forEach((sw, index)=>{
+   let li = document.createElement('li');
+   li.setAttribute('data-index', index);
+   li.classList.add('swit');
+   index == 0 ? li.classList.add('active') : '';
+   uls.append(li)
+
+
+   //switch by index
+
+   li.addEventListener('click', function(e){
+
+     //e.target ივენთის მდებარეობა
+    //e.type ივენთის ტიპი
+   // e.clientX აბრუნებს ივენთის მდებარეობას  ორიზონტალურად
+  // e.clientY აბრუნებს ივენთის მდებარეობას  ვერტიკალური
+  
+
+    if (!this.classList.contains('active')) {
+      
+     
+  
+
+     document.querySelector('li.active').classList.remove('active');
+     this.classList.add('active');
+     let ind = this.getAttribute('data-index');
+ 
+     let active = document.querySelector('.item.active');
+   
+ if(Number(ind) + 1 == p.length){
+     active.classList.remove('active');  
+     p[ind].classList.add('active');   
+ }else{
+     active.classList.replace('active', 'prevcarusel');  
+     p[ind].classList.add('active');   
+     
+ }
+
+     let pr = document.querySelector('.item.prevcarusel');
+     if (pr != null) {
+            setTimeout(()=>{
+      pr.classList.remove('prevcarusel')
+    
+  }, 600)
+     }
+
+ 
+
+    }
+
+
+
+   })
+
+})
+
+outsw.appendChild(uls)
+ 
+let left = 0;
+let tops = 0;
+ss.addEventListener('keydown', function(e){  
+     this.style.position = `relative` 
+  if (e.keyCode == 39) {
+     this.style.left = `${left}px`;
+  left++;
+  } 
+  
+  if (e.keyCode == 40) {
+    this.style.top = `${tops}px`; 
+     tops++;
+  }
+
+
+})
+
+window.addEventListener('scroll', function(){
+  console.log(this.scrollY)
+ 
+})
+ let ac = document.querySelector('.item.active');
+
+  console.log(ac.clientHeight)
+
     </script>
 </body>
 </html>

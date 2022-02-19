@@ -46,14 +46,54 @@ h1{
     position: absolute;
     width: 100vw;
     transform: translateX(100%);
+    z-index: -1;
+    color: #fff;
     transition: all .6s;
 }
 
+.item:last-child{
+    transform: translateX(-100%);
+}
+
 .item.active{
-    transform: translateX(0);
+    transform: translateX(0) !important;;
+    z-index: 9998;
+}
+
+.item.active + .item{
+    transform: translateX(100%)  ;
     z-index: 99;
 }
 
 .item.prevcarusel{
-    transform: translateX(-100%);
+    z-index: 99;
+    transform: translateX(-100%) !important;
+}
+
+.switch{
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.switch ul{
+  display: flex;
+}
+
+.switch ul li{
+ width: 20px;
+ height: 20px;
+ background-color: aliceblue;
+ display: block;
+ border-radius:3px ;
+ opacity: .6;
+ cursor: pointer;
+ transition: all .6s;
+ margin: 0 6px;
+}
+
+.switch ul li.active{
+opacity: 1;
 }
