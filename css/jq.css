@@ -57,3 +57,34 @@ body.bg-dark{
     padding: 20px;
     border: 10px solid green;
 }
+
+.d-flex{
+    display: flex;
+
+}
+.d-flex img{
+ cursor: pointer;
+}
+
+
+.imgoutput{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    opacity: 0;
+    padding: 20px;
+    transform: translateX(-50%);
+    z-index: 566;
+    background-color: #fff;
+    width: 300px;
+    height: 500px;
+    border: 1px solid red;
+}
+
+.imgoutput img{
+ max-width: 100%;
+}
+
+.parents{
+    text-align: center;
+}

@@ -244,6 +244,38 @@ s++;
 
  });
 
+
+ $('.imgoutput').slideUp();
+
+$(".d-flex img").click(function (e) { 
+    e.preventDefault();
+    $('.imgoutput').slideDown().css('opacity',1);
+    let src = $(this).attr('src')
+    $('.imgoutput img').attr('src',src)
+});
+
+$('.imgoutput span').click(function (e) { 
+    e.preventDefault();
+    $('.imgoutput').slideUp()
+});
+
+    // $('.child').parent() აბრუნებს მშობელს
+    // $('.child').parents() აბრუნებს მშობლებს
+    // $('.child').parentsUntil("body") აბრუნებს მშობლებს განსაზღვრულ დონემდე
+    // $('.parents').children() აბრუნებს ყველა შვილობილ ელემენტს
+    //$('.parents').children(".child") აბრუნებს სპეციფიურ შვილობილ ელემენტს 
+    // $('.child').next().css('color',  'red') აბრუნებს ელემენტის ქვედა მეზობელს
+    // $('.child').prev().css('color',  'green') აბრუნებს ელემენტის ზედა მეზობელს
+    // $('.child').siblings().css('color',  'red') აბრუნებს ელემენტის მეზობლებს
+    // $('.child').nextAll().css('color',  'red');  ყველა ქვედა მეზობელი
+    // $('.child').prevAll().css('color',  'green');  ყველა ზედა მეზობელი
+    //$('.parents p').eq(5) აბრუნებს ელემენტს ინდექსის მიხედვით
+    //$('.parents p').not('.child')  ნოთ სელექტორი
+    // $('.parents p').first().css('color',  'green'); აბრუნებს  პირველ ელემენტს
+    // $('.parents p').last().css('color',  'red'); აბრუნებს  ბოლო ელემენტს
+    // $('.parents').find('span').css('color',  'green');  ეძებს ელემენტს
+
+// endstart
 })
 
  
