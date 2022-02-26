@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/modalslide.css">
+    
+</head>
+<body>
+
+    <div class="col-lg-6 mx-auto">
+        <div class="row">
+            <div class="col-lg-4">
+              <div class="slid">
+                  <img data-index="1" src="https://nova.ge/images/thumbs/0022977_eleqtronuli-pnevmaturi-drel-perforatori-rgh9028-2_600.jpeg" class="img-fluid active" alt="">
+                  <img data-index="2" src="https://nova.ge/images/thumbs/0022977_eleqtronuli-pnevmaturi-drel-perforatori-rgh9028-2.jpeg" class="img-fluid" alt="">
+                  <img data-index="3" src="https://nova.ge/images/thumbs/0018982_khelis-instrumentebis-nakrebi-77-c-ingco-hkthp20771.jpeg" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <div class="poster">
+                <img data-index="1" src="https://nova.ge/images/thumbs/0022977_eleqtronuli-pnevmaturi-drel-perforatori-rgh9028-2_600.jpeg" class="img-fluid" alt="">
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="prevmodal">
+
+        <div class="arr prev">
+       <
+        </div>
+
+        
+        <div class="arr next">
+       >
+        </div>
+
+       <div class="parimg">
+           <img src="" alt="">
+       </div>
+     
+    <div class="manyimg">
+          <div class="d-flex justify-content-center">
+            <img data-index="1" src="https://nova.ge/images/thumbs/0022977_eleqtronuli-pnevmaturi-drel-perforatori-rgh9028-2_600.jpeg" class="img-fluid " alt="">
+            <img data-index="2" src="https://nova.ge/images/thumbs/0022977_eleqtronuli-pnevmaturi-drel-perforatori-rgh9028-2.jpeg" class="img-fluid" alt="">
+            <img data-index="3" src="https://nova.ge/images/thumbs/0018982_khelis-instrumentebis-nakrebi-77-c-ingco-hkthp20771.jpeg" class="img-fluid" alt="">
+
+        </div>
+    </div> 
+     
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+
+$('.slid img').click(function (e) { 
+    e.preventDefault();
+    
+    $('.slid').find('.active').removeClass('active')
+    $(this).addClass('active')
+    $('.poster img').attr('src', $(this).attr('src'))
+    $('.poster img').attr('data-index', $(this).data('index'))
+});
+
+
+$(".poster").click(function (e) { 
+    e.preventDefault();
+    $(".prevmodal").css('display', 'block')
+    $("body").addClass('modaled')
+  
+   let src = $(".poster img").attr('src')
+   let index = $(".poster img").data('index')
+   $('.parimg img').attr('src',src)
+   $('img[data-index="'+index+'"]').addClass('active')
+});
+
+$(document).click(function (e) { 
+    e.preventDefault();
+ if (e.target.classList[0] == "modaled") {
+    $(".prevmodal").css('display', 'none')
+    $("body").removeClass('modaled')   
+ 
+ }
+
+});
+
+// prev
+
+$(".prevmodal .prev").click(function (e) { 
+    e.preventDefault();
+
+
+    if ($('.manyimg img.active').prev().length > 0) {
+        $('.manyimg img.active').removeClass('active').prev().addClass('active')
+        let src = $('.manyimg img.active').attr('src')
+         $('.parimg img').attr('src', src)
+    }
+    
+
+});
+
+    </script>
+
+</body>
+</html>

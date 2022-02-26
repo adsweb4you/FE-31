@@ -275,6 +275,11 @@ $('.imgoutput span').click(function (e) {
     // $('.parents p').last().css('color',  'red'); აბრუნებს  ბოლო ელემენტს
     // $('.parents').find('span').css('color',  'green');  ეძებს ელემენტს
 
+
+    $.each($('.parents p'), function(index, element){
+        console.log($(element))
+    })
+
 // endstart
 })
 
